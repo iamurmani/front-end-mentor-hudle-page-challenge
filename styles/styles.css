@@ -1,0 +1,162 @@
+:root {
+    --violet-clr: hsl(257, 40%, 49%);
+    --soft-magenta-clr: hsl(300, 69%, 71%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    color: #fff;
+}
+
+body {
+    background-image: url(../images/bg-desktop.svg);
+    background-color: var(--violet-clr);
+    background-repeat: no-repeat;
+}
+
+header img {
+    height: 5rem;
+    margin: 5rem 0 5rem 5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 94%;
+    gap: 5rem;
+}
+.container > * {
+    width: 100%;
+}
+.screen-image img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.content h1 {
+    font-size: 4rem;
+    max-width: 70%;
+    margin-bottom: 2%;
+    font-family: 'Poppins', sans-serif;
+}
+.content {
+    /* margin-left: 4%; */
+    /* padding-left: 4%; */
+    padding-top: 3%;
+}
+
+.content p {
+    font-size: 1.75rem;
+    max-width: 78%;
+    line-height: 1.8;
+    margin-bottom: 3%;
+}
+
+button {
+    font-size: 1.75rem;
+    border: none;
+    padding: 0.75em 3.2em;
+    border-radius: 2em;
+    /* box-shadow: 1px 1px 3px 0px; */
+    filter: drop-shadow(2px 2px 6px black);;
+    color: #333333;
+    transition: all 1s;
+}
+button:hover {
+    color: #fff;
+    background-color: var(--soft-magenta-clr);
+    cursor: pointer;
+}
+.social {
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+    margin-right: 10%;
+}
+
+.circle {
+    font-size: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 1px white solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.circle:hover {
+    color: var(--soft-magenta-clr);
+    border-color: var(--soft-magenta-clr);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    .container {
+        display: block;
+        width: 80%;
+    }
+
+    header img {
+        height: 3rem;
+        margin: 2rem 0 4rem 4rem;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 8%;
+    }
+    .content h1 {
+        font-size: 2rem;
+        max-width: 100%;
+        text-align: center;
+    }
+    .content p {
+        font-size: 1.4rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    button {
+        font-size: 1.3rem;
+        padding: 0.75em 5.2em;
+        width: 80%;
+        margin: 10% auto;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 10%;
+        padding-bottom: 6%;
+
+    }
+
+    .circle {
+        font-size: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+}
